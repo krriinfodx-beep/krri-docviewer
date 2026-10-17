@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2A4C3C">
+<title>문서뷰어</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="문서뷰어">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="style.css?v=30">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><img class="logo-img" src="data:image/png;base64,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" alt="" width="36" height="36"><div><b>문서뷰어</b><small id="fname">문서 열기 · 고치기</small></div></div>
+  <div class="actions">
+    <button type="button" id="btnOpen" class="ghost home-btn" aria-label="처음 화면으로">⌂ 처음</button>
+    <button type="button" id="btnSave" class="primary" disabled>저장</button>
+  </div>
+</header>
+<input type="file" id="file" accept=".hwpx,.hwp,application/hwp+zip,application/vnd.hancom.hwpx,application/haansofthwpx,application/x-hwp,.pdf,application/pdf,.docx,.pptx,.xlsx,.xls,.ods,.csv,.tsv,image/*,video/*,audio/*,.txt,.md,.json,.xml,.log" hidden>
+
+<main id="start" class="start">
+  <div class="home">
+    <button type="button" class="linkbtn back" id="btnBack" hidden>← 보던 문서로 돌아가기</button>
+    <div class="hero">
+      <div class="hero-top"><img class="hero-ic" src="data:image/png;base64,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" alt="" width="64" height="64"><span class="only">KRRI 전용</span></div>
+      <h1>휴대폰에서 문서 열고 고치기</h1>
+    </div>
+    <button type="button" class="primary big" id="btnOpen2">문서 열기</button>
+    <div class="fmt-grid" id="fmtGrid">
+      <button type="button" class="fmt" data-accept=".hwp,.hwpx,application/x-hwp,application/haansofthwp,application/vnd.hancom.hwp,application/hwp,application/hwp+zip,application/vnd.hancom.hwpx,application/haansofthwpx,application/x-hwpx"><span class="fi" style="background:#2F5EA8">한</span><span class="fn">한글<small>hwp · hwpx</small></span><span class="ft edit">고치기</span></button>
+      <button type="button" class="fmt" data-accept=".xlsx,.xlsm,.xls,.ods,.csv,.tsv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,application/vnd.oasis.opendocument.spreadsheet,text/csv,text/comma-separated-values"><span class="fi" style="background:#1F7A4D">X</span><span class="fn">Excel<small>xlsx</small></span><span class="ft edit">고치기</span></button>
+      <button type="button" class="fmt" data-accept=".pptx,.pptm,application/vnd.openxmlformats-officedocument.presentationml.presentation"><span class="fi" style="background:#D24A26">P</span><span class="fn">PowerPoint<small>pptx</small></span><span class="ft edit">고치기</span></button>
+      <button type="button" class="fmt" data-accept=".pdf,application/pdf"><span class="fi pdf" style="background:#D92D2D">PDF</span><span class="fn">PDF<small>pdf</small></span><span class="ft edit">고치기</span></button>
+      <button type="button" class="fmt" data-accept=".docx,.docm,application/vnd.openxmlformats-officedocument.wordprocessingml.document"><span class="fi" style="background:#3B7BD4">W</span><span class="fn">Word<small>docx</small></span><span class="ft edit">고치기</span></button>
+      <button type="button" class="fmt" data-accept="image/*,video/*,audio/*,.txt,.md,.json,.xml,.log,text/plain,text/markdown,application/json,text/xml"><span class="fi" style="background:#6B7178">▶</span><span class="fn">사진·영상·글<small>jpg · mp4 · txt</small></span><span class="ft">보기</span></button>
+    </div>
+    <p class="open-all"><button type="button" class="linkbtn" id="btnOpenAll">목록에 안 보이면 → 모든 파일에서 찾기</button></p>
+    <section id="recent" class="recent" hidden aria-labelledby="recentT">
+      <div class="recent-h"><b id="recentT">최근 문서</b><input type="search" id="rq" placeholder="이름으로 찾기" aria-label="최근 문서 이름으로 찾기" hidden><button type="button" class="linkbtn" id="btnRecentClear">목록 비우기</button></div>
+      <ul id="recentList"></ul>
+    </section>
+    <div id="iosInstall" class="ios-install" hidden>
+      <b>아이폰에 앱으로 설치하기</b>
+      <ol><li>Safari 아래쪽 <b>공유 버튼</b>(네모에 위 화살표)을 누르고</li><li><b>「홈 화면에 추가」</b> → 「추가」를 누르세요.</li><li>홈 화면의 <b>「문서뷰어」</b>으로 실행하면 그다음부터는 <b>인터넷 없이도</b> 열려요.</li></ol>
+    </div>
+    <p id="iosOld" class="ios-install warn" hidden>이 아이폰은 iOS 16.4 이상으로 업데이트해야 문서를 열 수 있어요.</p>
+    <p class="ver">KRRI 임직원 전용 · 버전 1.10.0</p>
+  </div>
+</main>
+
+<div id="toolbar" class="toolbar" hidden>
+  <div class="tb-row">
+    <button type="button" id="btnUndo" class="ico" aria-label="되돌리기" title="되돌리기" disabled>↶</button>
+    <button type="button" id="btnRedo" class="ico" aria-label="다시 실행" title="다시 실행" disabled>↷</button>
+    <div class="qbox"><input type="search" id="q" placeholder="문서에서 찾기" aria-label="문서에서 찾기"><span id="qCount" class="qcount" aria-live="polite"></span></div>
+    <button type="button" id="qPrev" class="ico" aria-label="이전 찾은 곳" disabled>▲</button>
+    <button type="button" id="qNext" class="ico" aria-label="다음 찾은 곳" disabled>▼</button>
+  </div>
+  <div class="tb-row chips">
+    <button type="button" id="btnChanged" class="chip" aria-pressed="false">고친 곳 <span id="nChanged">0</span></button>
+    <button type="button" id="btnPage" class="chip">용지 여백</button>
+    <button type="button" id="btnPdf" class="chip">PDF로 저장</button>
+  </div>
+</div>
+<main id="doc" class="doc" hidden></main>
+<main id="viewer" class="viewer" hidden>
+  <div class="kv-bar"><span id="kvKind" class="chip"></span><span id="kvInfo" class="kv-info"></span><span id="kvEdits" class="kv-edits"></span><span id="kvRo" class="kv-ro">보기 전용</span></div>
+  <div id="kvHost" class="kv-host"></div>
+</main>
+
+<div id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheetT">
+  <div class="sheet-in">
+    <div class="sheet-h"><b id="sheetT">문단 고치기</b><button type="button" class="x" id="sheetX" aria-label="닫기">×</button></div>
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" id="tabText" aria-selected="true">글자 고치기</button>
+      <button type="button" role="tab" id="tabChar" aria-selected="false">글자 모양</button>
+      <button type="button" role="tab" id="tabPara" aria-selected="false">문단 모양</button>
+    </div>
+    <div id="panelChar" hidden>
+      <div class="frow"><span class="fl">적용 대상</span>
+        <div class="seg" id="cScope"><button type="button" data-v="all">문단 전체</button><button type="button" data-v="sel">고른 글자만</button></div>
+        <span class="muted small" id="cSelInfo"></span></div>
+      <textarea id="cTa" rows="3" readonly aria-label="글자 고르기(길게 눌러 범위 선택)"></textarea>
+      <p class="hint" id="cSelHint">글자를 길게 눌러 범위를 고르면 그 부분만 바뀌어요.</p>
+      <div class="frow three">
+        <div><span class="fl">크기</span><div class="num"><button type="button" data-step="cSize" data-d="-0.5" aria-label="글자 크기 줄이기">−</button><input id="cSize" data-f="size" type="number" inputmode="decimal" min="4" max="96" step="0.5" aria-label="글자 크기(pt)"><span class="u">pt</span><button type="button" data-step="cSize" data-d="0.5" aria-label="글자 크기 늘리기">+</button></div></div>
+        <div><span class="fl">자간</span><div class="num"><button type="button" data-step="cSpacing" data-d="-1" aria-label="자간 줄이기">−</button><input id="cSpacing" data-f="spacing" type="number" inputmode="numeric" min="-50" max="50" step="1" aria-label="자간(%)"><span class="u">%</span><button type="button" data-step="cSpacing" data-d="1" aria-label="자간 늘리기">+</button></div></div>
+        <div><span class="fl">장평</span><div class="num"><button type="button" data-step="cRatio" data-d="-5" aria-label="장평 줄이기">−</button><input id="cRatio" data-f="ratio" type="number" inputmode="numeric" min="50" max="200" step="5" aria-label="장평(%)"><span class="u">%</span><button type="button" data-step="cRatio" data-d="5" aria-label="장평 늘리기">+</button></div></div>
+      </div>
+      <div class="frow"><span class="fl">글자 꾸밈</span>
+        <div class="seg tog"><button type="button" id="cBold" data-f="bold" aria-pressed="false"><b>가</b> 굵게</button><button type="button" id="cItalic" data-f="italic" aria-pressed="false"><i>가</i> 기울임</button><button type="button" id="cUnder" data-f="underline" aria-pressed="false"><u>가</u> 밑줄</button></div></div>
+      <div class="frow"><span class="fl">글자 색</span>
+        <div class="sw" id="cColors"></div><input type="color" id="cColor" data-f="color" aria-label="글자 색 직접 고르기"></div>
+      <div class="frow"><span class="fl">글꼴 <span class="muted small">(이 문서에 있는 글꼴)</span></span>
+        <select id="cFont" data-f="font" aria-label="글꼴"></select></div>
+      <div class="sheet-f">
+        <button type="button" class="ghost" id="btnCharRevert">원래 모양</button>
+        <span class="sp"></span>
+        <button type="button" class="ghost" id="btnCharClose">닫기</button>
+        <button type="button" class="primary" id="btnCharApply">적용</button>
+      </div>
+    </div>
+    <div id="panelText">
+      <p class="warn" id="sheetWarn" hidden></p>
+      <textarea id="ta" rows="6" aria-label="내용"></textarea>
+      <div class="sheet-f">
+        <button type="button" class="ghost" id="btnRevert">원래대로</button>
+        <span class="sp"></span>
+        <button type="button" class="ghost" id="btnCancel">취소</button>
+        <button type="button" class="primary" id="btnApply">적용</button>
+      </div>
+    </div>
+    <div id="panelPara" hidden>
+      <div class="frow"><span class="fl">정렬</span>
+        <div class="seg" id="fAlign">
+          <button type="button" data-v="JUSTIFY">양쪽</button><button type="button" data-v="LEFT">왼쪽</button><button type="button" data-v="CENTER">가운데</button><button type="button" data-v="RIGHT">오른쪽</button><button type="button" data-v="DISTRIBUTE">배분</button>
+        </div></div>
+      <div class="frow"><span class="fl">줄 간격</span>
+        <div class="num"><button type="button" data-step="fLine" data-d="-10" aria-label="줄 간격 줄이기">−</button><input id="fLine" type="number" inputmode="numeric" min="50" max="500" step="10" aria-label="줄 간격(%)"><span class="u">%</span><button type="button" data-step="fLine" data-d="10" aria-label="줄 간격 늘리기">+</button></div>
+        <div class="pre" id="fLinePre"><button type="button" data-v="130">130</button><button type="button" data-v="160">160</button><button type="button" data-v="180">180</button><button type="button" data-v="200">200</button></div></div>
+      <div class="frow two">
+        <div><span class="fl">왼쪽 여백</span><div class="num"><button type="button" data-step="fLeft" data-d="-1" aria-label="왼쪽 여백 줄이기">−</button><input id="fLeft" type="number" inputmode="decimal" step="1" aria-label="왼쪽 여백(pt)"><span class="u">pt</span><button type="button" data-step="fLeft" data-d="1" aria-label="왼쪽 여백 늘리기">+</button></div></div>
+        <div><span class="fl">오른쪽 여백</span><div class="num"><button type="button" data-step="fRight" data-d="-1" aria-label="오른쪽 여백 줄이기">−</button><input id="fRight" type="number" inputmode="decimal" step="1" aria-label="오른쪽 여백(pt)"><span class="u">pt</span><button type="button" data-step="fRight" data-d="1" aria-label="오른쪽 여백 늘리기">+</button></div></div>
+      </div>
+      <div class="frow"><span class="fl">첫 줄</span>
+        <div class="seg" id="fFirst"><button type="button" data-v="none">보통</button><button type="button" data-v="indent">들여쓰기</button><button type="button" data-v="hang">내어쓰기</button></div>
+        <div class="num"><button type="button" data-step="fIndent" data-d="-1" aria-label="들여쓰기 줄이기">−</button><input id="fIndent" type="number" inputmode="decimal" min="0" step="1" aria-label="들여쓰기·내어쓰기(pt)"><span class="u">pt</span><button type="button" data-step="fIndent" data-d="1" aria-label="들여쓰기 늘리기">+</button></div></div>
+      <div class="frow two">
+        <div><span class="fl">문단 위 간격</span><div class="num"><button type="button" data-step="fPrev" data-d="-1" aria-label="문단 위 간격 줄이기">−</button><input id="fPrev" type="number" inputmode="decimal" min="0" step="1" aria-label="문단 위 간격(pt)"><span class="u">pt</span><button type="button" data-step="fPrev" data-d="1" aria-label="문단 위 간격 늘리기">+</button></div></div>
+        <div><span class="fl">문단 아래 간격</span><div class="num"><button type="button" data-step="fNext" data-d="-1" aria-label="문단 아래 간격 줄이기">−</button><input id="fNext" type="number" inputmode="decimal" min="0" step="1" aria-label="문단 아래 간격(pt)"><span class="u">pt</span><button type="button" data-step="fNext" data-d="1" aria-label="문단 아래 간격 늘리기">+</button></div></div>
+      </div>
+      <div class="frow scope"><span class="fl">적용 범위</span>
+        <label><input type="radio" name="fScope" value="this" checked> 이 문단만</label>
+        <label><input type="radio" name="fScope" value="same"> 같은 모양 문단 모두 <span id="fSameN"></span></label></div>
+      <div class="sheet-f">
+        <button type="button" class="ghost" id="btnFmtRevert">원래 모양</button>
+        <span class="sp"></span>
+        <button type="button" class="ghost" id="btnFmtClose">닫기</button>
+        <button type="button" class="primary" id="btnFmtApply">적용</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="pageSheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="pageT">
+  <div class="sheet-in">
+    <div class="sheet-h"><b id="pageT">용지 여백</b><button type="button" class="x" id="pageX" aria-label="닫기">×</button></div>
+    <p class="hint">한글의 「편집 용지」와 같아요(단위 mm). 문서의 모든 구역에 적용돼요.</p>
+    <div class="frow two">
+      <div><span class="fl">위쪽</span><div class="num"><button type="button" data-step="pTop" data-d="-1" aria-label="위쪽 줄이기">−</button><input id="pTop" type="number" inputmode="decimal" min="0" step="1" aria-label="위쪽 여백(mm)"><span class="u">mm</span><button type="button" data-step="pTop" data-d="1" aria-label="위쪽 늘리기">+</button></div></div>
+      <div><span class="fl">아래쪽</span><div class="num"><button type="button" data-step="pBottom" data-d="-1" aria-label="아래쪽 줄이기">−</button><input id="pBottom" type="number" inputmode="decimal" min="0" step="1" aria-label="아래쪽 여백(mm)"><span class="u">mm</span><button type="button" data-step="pBottom" data-d="1" aria-label="아래쪽 늘리기">+</button></div></div>
+      <div><span class="fl">왼쪽</span><div class="num"><button type="button" data-step="pLeft" data-d="-1" aria-label="왼쪽 줄이기">−</button><input id="pLeft" type="number" inputmode="decimal" min="0" step="1" aria-label="왼쪽 여백(mm)"><span class="u">mm</span><button type="button" data-step="pLeft" data-d="1" aria-label="왼쪽 늘리기">+</button></div></div>
+      <div><span class="fl">오른쪽</span><div class="num"><button type="button" data-step="pRight" data-d="-1" aria-label="오른쪽 줄이기">−</button><input id="pRight" type="number" inputmode="decimal" min="0" step="1" aria-label="오른쪽 여백(mm)"><span class="u">mm</span><button type="button" data-step="pRight" data-d="1" aria-label="오른쪽 늘리기">+</button></div></div>
+      <div><span class="fl">머리말</span><div class="num"><button type="button" data-step="pHeader" data-d="-1" aria-label="머리말 줄이기">−</button><input id="pHeader" type="number" inputmode="decimal" min="0" step="1" aria-label="머리말 여백(mm)"><span class="u">mm</span><button type="button" data-step="pHeader" data-d="1" aria-label="머리말 늘리기">+</button></div></div>
+      <div><span class="fl">꼬리말</span><div class="num"><button type="button" data-step="pFooter" data-d="-1" aria-label="꼬리말 줄이기">−</button><input id="pFooter" type="number" inputmode="decimal" min="0" step="1" aria-label="꼬리말 여백(mm)"><span class="u">mm</span><button type="button" data-step="pFooter" data-d="1" aria-label="꼬리말 늘리기">+</button></div></div>
+    </div>
+    <div class="frow"><span class="fl">빠른 설정</span>
+      <div class="pre" id="pPre"><button type="button" data-p="20,15,30,30,15,15">한글 기본</button><button type="button" data-p="15,15,20,20,10,10">좁게</button><button type="button" data-p="10,10,15,15,10,10">아주 좁게</button></div></div>
+    <div class="sheet-f">
+      <button type="button" class="ghost" id="btnPageRevert">원래 여백</button>
+      <span class="sp"></span>
+      <button type="button" class="ghost" id="btnPageClose">닫기</button>
+      <button type="button" class="primary" id="btnPageApply">적용</button>
+    </div>
+  </div>
+</div>
+
+<div id="pickMiss" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="pmT">
+  <div class="sheet-in">
+    <div class="sheet-h"><b id="pmT">찾는 파일이 없나요?</b><button type="button" class="x" id="pmX" aria-label="닫기">×</button></div>
+    <p class="pm-sub" id="pmSub">방금 목록은 한 가지 형식만 보여 줬어요</p>
+    <div class="sheet-f col">
+      <button type="button" class="primary" id="pmAll">모든 파일 보기</button>
+      <button type="button" class="ghost" id="pmBack">← 돌아가기</button>
+    </div>
+  </div>
+</div>
+<div id="editSheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="esT">
+  <div class="sheet-in">
+    <div class="sheet-h"><b id="esT">고치기</b><button type="button" class="x" id="esX" aria-label="닫기">×</button></div>
+    <p class="warn" id="esNote" hidden></p>
+    <textarea id="esTa" rows="3" aria-label="내용"></textarea>
+    <div class="sheet-f">
+      <button type="button" class="ghost" id="esRevert">원래대로</button>
+      <span class="sp"></span>
+      <button type="button" class="ghost" id="esCancel">취소</button>
+      <button type="button" class="primary" id="esApply">적용</button>
+    </div>
+  </div>
+</div>
+
+<div id="saveSheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="saveT">
+  <div class="sheet-in">
+    <div class="sheet-h"><b id="saveT">저장</b><button type="button" class="x" id="saveX" aria-label="닫기">×</button></div>
+    <p id="saveMsg" class="muted"></p>
+    <div class="sheet-f col">
+      <button type="button" class="primary" id="btnDownload">내려받기(.hwpx)</button>
+      <button type="button" class="ghost" id="btnShare" hidden>공유하기(메일·메신저·파일)</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" hidden></div>
+<script src="hwpx.js?v=30"></script>
+<script src="hwp2hwpx.js?v=30"></script>
+<script src="officeedit.js?v=30"></script>
+<script src="viewer.js?v=30"></script>
+<script src="app.js?v=30"></script>
+</body>
+</html>

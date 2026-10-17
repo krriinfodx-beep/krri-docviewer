@@ -1,0 +1,16 @@
+{
+  "name": "KRRI 문서뷰어",
+  "short_name": "문서뷰어",
+  "description": "한국철도기술연구원(KRRI) 전용 — 휴대폰에서 한글·Word·Excel·PowerPoint 를 고치고 PDF·이미지 등을 봅니다. 문서는 휴대폰 밖으로 보내지 않습니다.",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#e9ebee",
+  "theme_color": "#2A4C3C",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
